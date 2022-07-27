@@ -20,7 +20,12 @@ const App = () => {
   }
   const renderTask = (value) => {
     return (<div className='task-div' id={`${value.task_id}`} key={value.task_id}>
-      {(value.assets).map(renderAsset)}
+      <div className='task-heading-div'>
+        {value.task_title}
+      </div>
+      <div className='asset-div'>
+        {(value.assets).map(renderAsset)}
+      </div>
     </div>);
   }
   return (
